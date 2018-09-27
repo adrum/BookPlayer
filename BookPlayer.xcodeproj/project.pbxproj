@@ -70,6 +70,7 @@
 		C3FE3F8220A090880055B9C6 /* limitPanAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FE3F8120A090880055B9C6 /* limitPanAngle.swift */; };
 		C3FE94792080086800BCEA37 /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FE94782080086800BCEA37 /* BookCellView.swift */; };
 		D367F7681FA2A6F000FEDB37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D367F7671FA2A6F000FEDB37 /* Constants.swift */; };
+		D9B551DD20FAFB71001F044D /* CarPlayContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B551DC20FAFB71001F044D /* CarPlayContentManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		C3FE3F8120A090880055B9C6 /* limitPanAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = limitPanAngle.swift; sourceTree = "<group>"; };
 		C3FE94782080086800BCEA37 /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
 		D367F7671FA2A6F000FEDB37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9B551DC20FAFB71001F044D /* CarPlayContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlayContentManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 		C35E04F1207E8D0F007D3370 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D9B551DC20FAFB71001F044D /* CarPlayContentManager.swift */,
 				410D0FEE1EDDBC3300A52EB9 /* DataManager.swift */,
 				4165EE1120A7D1E100616EDF /* RootViewController.swift */,
 				4165EE1320A7E8CC00616EDF /* BaseListViewController.swift */,
@@ -605,6 +608,7 @@
 				410D0FEF1EDDBC3300A52EB9 /* DataManager.swift in Sources */,
 				4165EDFF20A743D500616EDF /* Chapter+CoreDataProperties.swift in Sources */,
 				C36C4D5C20A23E1800AFDB76 /* MiniPlayerViewController.swift in Sources */,
+				D9B551DD20FAFB71001F044D /* CarPlayContentManager.swift in Sources */,
 				41839AB820AA8C970047E55D /* Book+CoreDataProperties.swift in Sources */,
 				C33E843C20C6E179004A0489 /* ItemProgress.swift in Sources */,
 				410D0FED1EDCF4B000A52EB9 /* SettingsViewController.swift in Sources */,

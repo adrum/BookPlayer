@@ -12,6 +12,7 @@ import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     var window: UIWindow?
     var wasPlayingBeforeInterruption: Bool = false
 
@@ -47,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // register for remote events
         self.setupMPRemoteCommands()
+        
+        // setup carplay interface
+        self.setupCarPlayContentManager()
 
         return true
     }
@@ -206,5 +210,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PlayerManager.shared.rewind()
             return .success
         }
+        
+        MPRemoteCommandCenter.shared().changePlaybackRateCommand.supportedPlaybackRates = PlayerManager.speedOptions.reversed().sorted(by: { (a, b) -> Bool in
+            return a > b
+        }).map({ (option) -> NSNumber in
+            return NSNumber(value: option)
+        })
+        
+        MPRemoteCommandCenter.shared().changePlaybackRateCommand.addTarget { (commandEvent) -> MPRemoteCommandHandlerStatus in
+            
+            guard let cmd = commandEvent as? MPChangePlaybackRateCommandEvent else {
+                return .success
+            }
+            
+            PlayerManager.shared.speed = cmd.playbackRate
+            return .success
+        }
+    }
+    
+    func setupCarPlayContentManager() {
+        MPPlayableContentManager.shared().dataSource = CarPlayContentManager.shared
+        MPPlayableContentManager.shared().delegate = CarPlayContentManager.shared
     }
 }

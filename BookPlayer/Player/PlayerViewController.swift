@@ -158,9 +158,8 @@ class PlayerViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func setSpeed() {
         let actionSheet = UIAlertController(title: nil, message: "Set playback speed", preferredStyle: .actionSheet)
-        let speedOptions: [Float] = [2.5, 2, 1.5, 1.25, 1, 0.75]
 
-        for speed in speedOptions {
+        for speed in PlayerManager.speedOptions {
             if speed == PlayerManager.shared.speed {
                 actionSheet.addAction(UIAlertAction(title: "\u{00A0} \(speed) ✓", style: .default, handler: nil))
             } else {
